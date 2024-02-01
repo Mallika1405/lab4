@@ -12,7 +12,16 @@ public class ArrayTests {
 
   @Test
   public void testReversed() {
-    int[] input1 = { };
-    assertArrayEquals(new int[]{ }, ArrayExamples.reversed(input1));
+    int[] input1 = {1,2,3,4,5 };
+    assertArrayEquals(new int[]{ 5,4,3,2,1}, ArrayExamples.reversed(input1));
   }
+
+  @Test
+  public void testaverageWithoutLowest(){
+    double [] arr={10,4,5,8,6,2,2};
+    double avg=ArrayExamples.averageWithoutLowest(arr);
+    assertEquals(6.6,avg,0.001);
+
+  }
+
 }
