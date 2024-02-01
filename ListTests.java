@@ -21,6 +21,26 @@ public class ListTests {
         List <String> actual=ListExamples.filter(newList,new ListExamples());
         assertEquals(filString, actual);
 
+    
+    }
+
+    public void testMerge(){
+        List <String> l1=new ArrayList<>();
+        List <String> l2=new ArrayList<>();
+        l1.add("a");
+        l1.add("c");
+        l1.add("e");
+        l2.add("b");
+        l2.add("d");
+        ArrayList <String> l3=new ArrayList<>();
+        l3.add("a");
+        l3.add("b");
+        l3.add("c");
+        l3.add("d");
+        l3.add("e");
+
+        assertEquals(l3,ListExamples.merge(l1, l2));
+
     }
 
     
